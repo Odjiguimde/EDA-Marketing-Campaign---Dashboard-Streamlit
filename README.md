@@ -1,6 +1,6 @@
-# 📊 EDA Marketing Campaign — Dashboard Streamlit
+# 📊 EDA Marketing Campaign — Notebook + Dashboard Streamlit
 
-Analyse exploratoire interactive des données de campagnes marketing client.  
+Analyse exploratoire complète des données de campagnes marketing client.  
 Projet réalisé dans le cadre d'un projet Data Science (Projet 1 — EDA).
 
 ---
@@ -18,14 +18,64 @@ Projet réalisé dans le cadre d'un projet Data Science (Projet 1 — EDA).
 ```
 eda_marketing/
 │
-├── app.py                    # Application Streamlit principale
-├── marketing_campaign.csv    # Dataset (Marketing Campaign - Kaggle)
-├── requirements.txt          # Dépendances Python
-├── .streamlit/
-│   └── config.toml           # Configuration thème Streamlit
-├── .gitignore
-└── README.md
+├── 📓 EDA_Marketing_Campaign.ipynb   # Notebook — analyse complète pas à pas
+├── 🐍 app.py                          # Application Streamlit interactive
+├── 📊 marketing_campaign.csv          # Dataset (Marketing Campaign - Kaggle)
+├── 📋 requirements.txt                # Dépendances Python
+├── 📖 README.md
+├── 🚫 .gitignore
+├── plots/                             # Graphiques exportés par le notebook
+│   ├── 01_distributions_numeriques.png
+│   ├── 02_boxplots_outliers.png
+│   ├── 03_variables_categorielles.png
+│   ├── 04_heatmap_correlations.png
+│   ├── 05_correlations_target.png
+│   ├── 06_scatter_plots.png
+│   ├── 07_depenses_education.png
+│   ├── 08_segments_conversion.png
+│   ├── 09_performance_campagnes.png
+│   └── 10_canaux_achat.png
+└── .streamlit/
+    └── config.toml                    # Thème sombre personnalisé
 ```
+
+---
+
+## 📓 Notebook — `EDA_Marketing_Campaign.ipynb`
+
+Le notebook documente **toute la démarche analytique** étape par étape, idéal pour présenter votre travail à un recruteur ou un jury.
+
+| Section | Contenu |
+|---|---|
+| **1. Chargement & aperçu** | Lecture du CSV, audit qualité, valeurs manquantes, doublons |
+| **2. Nettoyage & Feature Engineering** | Imputation, nettoyage Marital_Status, 8 nouvelles variables |
+| **3. Statistiques univariées** | Histogrammes, boxplots, skewness, variables catégorielles |
+| **4. Statistiques multivariées** | Heatmap corrélations, scatter plots, dépenses × éducation |
+| **5. Segments clients** | Taux de conversion par éducation, revenu, âge, statut marital |
+| **6. Performance des campagnes** | Taux d'acceptation Cmp1→5, analyse des canaux d'achat |
+| **7. Insights & Recommandations** | Synthèse automatique, export CSV nettoyé |
+
+### Lancer le notebook
+
+```bash
+jupyter notebook EDA_Marketing_Campaign.ipynb
+# ou
+jupyter lab EDA_Marketing_Campaign.ipynb
+```
+
+---
+
+## 🖥️ Application Streamlit — `app.py`
+
+Dashboard interactif avec filtres dynamiques (éducation, âge, revenu, statut marital) et 5 onglets :
+
+| Onglet | Contenu |
+|---|---|
+| **🗂 Aperçu** | Dataframe, types, nulls, stats descriptives |
+| **📈 Univarié** | Histogrammes + boxplots interactifs, camemberts |
+| **🔗 Multivarié** | Heatmap, scatter plot configurable, dépenses × éducation |
+| **🎯 Segments** | Conversion par segment, performance campagnes, canaux d'achat |
+| **💡 Insights** | Synthèse automatique, export CSV, prochaines étapes |
 
 ---
 
@@ -45,37 +95,6 @@ eda_marketing/
 | `Num*Purchases` | Nombre d'achats par canal |
 | `AcceptedCmp1–5` | Réponse aux campagnes 1 à 5 |
 | `Response` | Réponse à la dernière campagne (variable cible) |
-
----
-
-## 🧠 Fonctionnalités
-
-### 🗂 Aperçu des données
-- Aperçu du dataframe, types de variables
-- Valeurs manquantes, doublons
-- Statistiques descriptives complètes
-
-### 📈 Analyse univariée
-- Histogrammes avec lignes moyenne/médiane
-- Boxplots pour la détection d'outliers
-- Graphiques camembert & barres pour les catégories
-- Skewness affiché pour chaque variable
-
-### 🔗 Analyse multivariée
-- Heatmap de corrélations
-- Corrélations avec la variable cible `Response`
-- Scatter plot interactif (X, Y, couleur au choix)
-- Dépenses par catégorie de produit × niveau d'éducation
-
-### 🎯 Segments clients
-- Taux de conversion par segment (éducation, âge, revenu...)
-- Performance de chaque campagne (Cmp1→5 + dernière)
-- Analyse des canaux d'achat (Web, Catalogue, Magasin, Promo)
-
-### 💡 Insights & Recommandations
-- Synthèse automatique des résultats clés
-- Export CSV des données filtrées
-- Prochaines étapes pour la modélisation
 
 ---
 

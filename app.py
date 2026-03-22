@@ -611,9 +611,10 @@ with tabs[4]:
         cluster_profile = dff_cl.groupby("Cluster")[
             cluster_features + ["Response","TotalSpend","Income"]
         ].mean().round(2)
-        cluster_profile["Taux_conv"] = (cluster_profile["Response"]*100).round(1).astype(str)+"%"
         cluster_profile = cluster_profile.drop(columns=["Response"])
-        st.dataframe(cluster_profile.style.background_gradient(cmap="Blues", axis=0),
+        num_cols_cp = cluster_profile.select_dtypes(include=np.number).columns.tolist()
+        cluster_profile["Taux_conv %"] = (dff_cl.groupby("Cluster")["Response"].mean()*100).round(1)
+        st.dataframe(cluster_profile.style.background_gradient(cmap="Blues", axis=0, subset=num_cols_cp),
                      use_container_width=True)
 
         # Radar chart per cluster

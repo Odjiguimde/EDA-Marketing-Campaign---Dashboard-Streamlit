@@ -484,7 +484,7 @@ if data_ok:
         st.pyplot(fig, use_container_width=True)
         plt.close()
 
-        st.markdown('<div class="section-header">Canal d'achat préféré</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">Canal d\'achat préféré</div>', unsafe_allow_html=True)
         channel_cols  = ["NumWebPurchases","NumCatalogPurchases","NumStorePurchases","NumDealsPurchases"]
         channel_names = ["Web", "Catalogue", "Magasin", "Promotions"]
         chan_total = dff[channel_cols].sum()

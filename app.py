@@ -261,7 +261,7 @@ with tabs[0]:
         for b, v in zip(bars, vc.values):
             ax.text(b.get_x()+b.get_width()/2, b.get_height()+5,
                     f"{v}\n({v/len(dff)*100:.1f}%)", ha="center", fontsize=9, fontweight="600")
-        th(ax, "Répartition Response", ylabel="Effectif")
+        th(ax, "Répartition Response", yl="Effectif")
         ax.grid(axis="x", visible=False)
         st.pyplot(fig, use_container_width=True); plt.close()
 

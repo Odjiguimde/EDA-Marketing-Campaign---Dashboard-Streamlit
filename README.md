@@ -7,7 +7,7 @@ Projet réalisé dans le cadre d'un projet Data Science (Projet 1 — EDA).
 
 ## 🚀 Démo en ligne
 
-[![Streamlit App]([amlit.app](https://7mgvbwg6oftfzuyqqkytc2.streamlit.app/)](https://7mgvbwg6oftfzuyqqkytc2.streamlit.app/))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://7mgvbwg6oftfzuyqqkytc2.streamlit.app/)
 
 ---
 

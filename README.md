@@ -1,27 +1,26 @@
-# 📊 EDA Marketing Campaign — Notebook + Dashboard Streamlit
+# EDA Marketing Campaign — Notebook + Dashboard Streamlit
 
-Analyse exploratoire complète des données de campagnes marketing client.  
+Analyse exploratoire complète des données de campagnes marketing client.
 Projet réalisé dans le cadre d'un projet Data Science (Projet 1 — EDA).
 
 ---
 
-## 🚀 Démo en ligne
+## Demo en ligne
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://7mgvbwg6oftfzuyqqkytc2.streamlit.app/)
 
 ---
 
-## 📂 Structure du projet
-
+## Structure du projet
 ```
 eda_marketing/
 │
-├── 📓 EDA_Marketing_Campaign.ipynb   # Notebook — analyse complète pas à pas
-├── 🐍 app.py                          # Application Streamlit interactive
-├── 📊 marketing_campaign.csv          # Dataset (Marketing Campaign - Kaggle)
-├── 📋 requirements.txt                # Dépendances Python
-├── 📖 README.md
-├── 🚫 .gitignore
+├── EDA_Marketing_Campaign.ipynb   # Notebook — analyse complète pas à pas
+├── app.py                          # Application Streamlit interactive
+├── marketing_campaign.csv          # Dataset (Marketing Campaign - Kaggle)
+├── requirements.txt                # Dépendances Python
+├── README.md
+├── .gitignore
 ├── plots/                             # Graphiques exportés par le notebook
 │   ├── 01_distributions_numeriques.png
 │   ├── 02_boxplots_outliers.png
@@ -39,7 +38,7 @@ eda_marketing/
 
 ---
 
-## 📓 Notebook — `EDA_Marketing_Campaign.ipynb`
+## Notebook — `EDA_Marketing_Campaign.ipynb`
 
 Le notebook documente **toute la démarche analytique** étape par étape, idéal pour présenter votre travail à un recruteur ou un jury.
 
@@ -48,13 +47,12 @@ Le notebook documente **toute la démarche analytique** étape par étape, idéa
 | **1. Chargement & aperçu** | Lecture du CSV, audit qualité, valeurs manquantes, doublons |
 | **2. Nettoyage & Feature Engineering** | Imputation, nettoyage Marital_Status, 8 nouvelles variables |
 | **3. Statistiques univariées** | Histogrammes, boxplots, skewness, variables catégorielles |
-| **4. Statistiques multivariées** | Heatmap corrélations, scatter plots, dépenses × éducation |
+| **4. Statistiques multivariées** | Heatmap corrélations, scatter plots, dépenses x éducation |
 | **5. Segments clients** | Taux de conversion par éducation, revenu, âge, statut marital |
 | **6. Performance des campagnes** | Taux d'acceptation Cmp1→5, analyse des canaux d'achat |
 | **7. Insights & Recommandations** | Synthèse automatique, export CSV nettoyé |
 
 ### Lancer le notebook
-
 ```bash
 jupyter notebook EDA_Marketing_Campaign.ipynb
 # ou
@@ -63,21 +61,21 @@ jupyter lab EDA_Marketing_Campaign.ipynb
 
 ---
 
-## 🖥️ Application Streamlit — `app.py`
+## Application Streamlit — `app.py`
 
 Dashboard interactif avec filtres dynamiques (éducation, âge, revenu, statut marital) et 5 onglets :
 
 | Onglet | Contenu |
 |---|---|
-| **🗂 Aperçu** | Dataframe, types, nulls, stats descriptives |
-| **📈 Univarié** | Histogrammes + boxplots interactifs, camemberts |
-| **🔗 Multivarié** | Heatmap, scatter plot configurable, dépenses × éducation |
-| **🎯 Segments** | Conversion par segment, performance campagnes, canaux d'achat |
-| **💡 Insights** | Synthèse automatique, export CSV, prochaines étapes |
+| **Aperçu** | Dataframe, types, nulls, stats descriptives |
+| **Univarié** | Histogrammes + boxplots interactifs, camemberts |
+| **Multivarié** | Heatmap, scatter plot configurable, dépenses x éducation |
+| **Segments** | Conversion par segment, performance campagnes, canaux d'achat |
+| **Insights** | Synthèse automatique, export CSV, prochaines étapes |
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 **Source :** [Kaggle — Marketing Campaign](https://www.kaggle.com/datasets/rodsaldanha/arketingcampaign/data)
 
@@ -96,8 +94,7 @@ Dashboard interactif avec filtres dynamiques (éducation, âge, revenu, statut m
 
 ---
 
-## 🛠 Installation locale
-
+## Installation locale
 ```bash
 # 1. Cloner le dépôt
 git clone https://github.com/votre-username/eda-marketing.git
@@ -119,9 +116,9 @@ L'application s'ouvre automatiquement à l'adresse : `http://localhost:8501`
 
 ---
 
-## ☁️ Déploiement sur Streamlit Cloud (gratuit)
+## Déploiement sur Streamlit Cloud (gratuit)
 
-### Étape 1 — Pousser sur GitHub
+### Etape 1 — Pousser sur GitHub
 ```bash
 git init
 git add .
@@ -131,18 +128,18 @@ git remote add origin https://github.com/votre-username/eda-marketing.git
 git push -u origin main
 ```
 
-### Étape 2 — Déployer sur Streamlit Cloud
+### Etape 2 — Déployer sur Streamlit Cloud
 1. Aller sur **[share.streamlit.io](https://share.streamlit.io)**
 2. Se connecter avec votre compte GitHub
 3. Cliquer sur **"New app"**
 4. Sélectionner votre dépôt, branche `main`, fichier `app.py`
-5. Cliquer **"Deploy"** → l'URL est générée en ~2 minutes ✅
+5. Cliquer **"Deploy"** → l'URL est générée en ~2 minutes
 
-> ⚠️ Le fichier `marketing_campaign.csv` doit être inclus dans le dépôt GitHub pour que Streamlit Cloud puisse y accéder.
+> Le fichier `marketing_campaign.csv` doit être inclus dans le dépôt GitHub pour que Streamlit Cloud puisse y accéder.
 
 ---
 
-## 🧰 Technologies utilisées
+## Technologies utilisées
 
 | Outil | Usage |
 |---|---|
@@ -155,7 +152,7 @@ git push -u origin main
 
 ---
 
-## 📊 Variables créées (Feature Engineering)
+## Variables créées (Feature Engineering)
 
 | Variable | Formule |
 |---|---|
@@ -170,12 +167,12 @@ git push -u origin main
 
 ---
 
-## 🤝 Contribution
+## Contribution
 
 Les pull requests sont les bienvenues. Pour des changements majeurs, ouvrez d'abord une issue.
 
 ---
 
-## 📄 Licence
+## Licence
 
 MIT — Libre d'utilisation pour tout projet éducatif ou professionnel.
